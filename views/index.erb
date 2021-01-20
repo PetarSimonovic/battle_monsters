@@ -1,6 +1,13 @@
-<h1>This is working!</h1>
-<form action="/names" method="post">
-  <input type="text" id="player_one" name="player_one">
-  <input type="text" id="player_two" name="player_two">
+<h1>Welcome to Battle!</h1>
+<h2>Sign up to play</h2>
+<form action="/play" method="post">
+  <label for="player_1_name">
+    Player 1
+    <input type="text" id="player_one" name="player_one">
+  </label>
+  <label for="player_2_name">
+    Player 2
+    <input type="text" id="player_two" name="player_two">
+  </label>
   <input type="submit" value="Submit">
 </form>
