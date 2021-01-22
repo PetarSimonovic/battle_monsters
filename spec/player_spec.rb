@@ -15,11 +15,8 @@ describe "Player" do
   end
 
   it "receives damage" do
-    expect { claude.receive_damage }.to change{ claude.hit_points }.by(-Player::HIT)
-  end
-
-  it "reduces hit_points after attack" do
-    expect { pete.attack(claude) }.to change{ claude.hit_points }.by(-Player::HIT)
+    hit = 10
+    expect { claude.receive_damage }.to change{ claude.hit_points }.by(- hit)
   end
 
 end
