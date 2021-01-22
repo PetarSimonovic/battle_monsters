@@ -1,4 +1,4 @@
-<h1> <%= @player_one.name %> attacked <%= @player_two.name %>!</h1>
+<h1> <%= $game.defender.name %> attacked <%= $game.attacker.name %>!</h1>
 <form action="/play" method="get">
   <input type="submit" value="Next move">
 </form>

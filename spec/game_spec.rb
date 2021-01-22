@@ -16,6 +16,9 @@ describe "Game" do
       it 'returns a player object with the right name' do
         expect(game.player_one.name).to eq player_one_name
       end
+      it 'begins as the attacker' do
+        expect(game.attacker).to be game.player_one
+      end
     end
 
     describe '#player_two' do
@@ -33,5 +36,8 @@ describe "Game" do
     game = Game.new("claude", "pete")
     expect { game.attack(game.player_one) }.to change{ game.player_one.hit_points }.by(-10)
   end
+
+  # 1. player_one begins as attacker; player_two begins as defender
+  # 2. after an attack the players switch.
 
 end
